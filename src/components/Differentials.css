@@ -1,0 +1,54 @@
+/* src/components/Differentials.css */
+.differentials {
+  padding: 6rem 5%;
+  background: var(--bg-primary);
+  position: relative; z-index: 1;
+}
+.differentials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.differentials__visual {
+  display: flex; align-items: center; justify-content: center;
+}
+.diff-glow-circle {
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,106,252,.2) 0%, transparent 70%);
+  border: 1px solid rgba(0,106,252,.15);
+  display: flex; align-items: center; justify-content: center;
+}
+.diff-list {
+  display: flex; flex-direction: column; gap: 1.2rem;
+}
+.diff-item {
+  display: flex; gap: 1.2rem; align-items: flex-start;
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  transition: all var(--transition);
+}
+.diff-item:hover {
+  border-color: var(--glass-hover);
+  box-shadow: 0 8px 32px rgba(0,0,0,.2), 0 0 24px var(--glow);
+  transform: translateX(6px);
+}
+.diff-item__icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: var(--radius);
+  background: rgba(0,106,252,.15);
+  border: 1px solid rgba(0,106,252,.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+}
+.diff-item h4 { font-size: .95rem; font-weight: 700; margin-bottom: .3rem; }
+.diff-item p  { font-size: .83rem; color: var(--text-secondary); }
+
+@media (max-width: 1024px) {
+  .differentials__grid { grid-template-columns: 1fr; }
+  .differentials__visual { display: none; }
+}
