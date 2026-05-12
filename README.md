@@ -71,35 +71,6 @@ owlcodex/
 
 ---
 
-## ✏️ Como personalizar
-
-### Trocar textos / traduzir
-Edite `src/i18n/translations.js` — todos os textos estão centralizados lá,
-separados por seção e idioma (PT / EN).
-
-### Mudar cores
-Edite as variáveis em `src/index.css`:
-```css
-:root {
-  --bg-primary:    #111821;
-  --bg-secondary:  #0B1F3B;
-  --accent:        #006AFC;
-  --text-primary:  #E2E2E2;
-  /* ... */
-}
-```
-
-### Adicionar/remover projetos
-Edite o array `projects.items` em `src/i18n/translations.js`.
-
-### Integrar formulário com backend
-Abra `src/components/Contact.jsx` e substitua o `setTimeout` dentro de
-`handleSubmit` pela sua chamada real (fetch, axios, EmailJS, etc).
-
-### Conectar redes sociais
-Abra `src/components/Footer.jsx` e troque os `href` dos `.social-btn`.
-
----
 
 ## 🛠️ Tecnologias
 
